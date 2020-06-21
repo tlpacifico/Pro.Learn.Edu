@@ -1,0 +1,26 @@
+<Project>
+
+  <PropertyGroup>
+    <Product>Pro.Learn.Edu</Product> 
+    <Authors>Thacio Luiz Pacifico de Oliveira</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateAssemblyTitleAttribute>true</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>true</GenerateAssemblyDescriptionAttribute>
+    <LangVersion>8</LangVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.20000</FileVersion>
+    <VersionPrefix>1.0.0-alpha01</VersionPrefix>
+  </PropertyGroup>
+
+</Project>
