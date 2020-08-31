@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\tools\common.props" />
+
+  <PropertyGroup>
+    <RootNamespace>Pro.Learn.Edu.Business</RootNamespace>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>

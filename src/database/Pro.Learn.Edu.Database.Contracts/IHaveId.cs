@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Pro.Learn.Edu.Database
 {   
-    public interface IHaveId
+    public interface IHaveId<T>
     {
-        long Id { get; set; }
+        T Id { get; set; }
     }
 }

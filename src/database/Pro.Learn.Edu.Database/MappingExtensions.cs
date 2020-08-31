@@ -6,7 +6,7 @@ namespace Pro.Learn.Edu.Database
     internal static class MappingExtensions
     {
         public static EntityTypeBuilder<T> MapPrimaryKey<T>(this EntityTypeBuilder<T> builder)
-            where T : class, IHaveId
+            where T : class, IHaveId<long>
         {
            builder.HasKey(e => e.Id);
 
@@ -29,7 +29,7 @@ namespace Pro.Learn.Edu.Database
         }
 
         public static EntityTypeBuilder<T> CreateTableWithIdAndExternalId<T>(this EntityTypeBuilder<T> opt, string tableName, string schema)
-            where T : class, IHaveExternalId, IHaveId
+            where T : class, IHaveExternalId, IHaveId<long>
         {
             opt.ToTable(tableName, schema);
             opt.MapPrimaryKey();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Pro.Learn.Edu.Database.Entity
 {
-    public class ExamEntity : IHaveId, IHaveExternalId
+    public class ExamEntity : IHaveId<long>, IHaveExternalId
     {
         public long Id { get; set; }
         public Guid ExternalId { get; set; }

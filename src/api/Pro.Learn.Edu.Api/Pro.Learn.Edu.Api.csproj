@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\..\tools\common.props" />
+  
+  <PropertyGroup>
+    <RootNamespace>Pro.Learn.Edu.Api</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\business\Pro.Learn.Edu.Business\Pro.Learn.Edu.Business.csproj" />
+    <ProjectReference Include="..\..\database\Pro.Learn.Edu.Database\Pro.Learn.Edu.Database.csproj" />
+  </ItemGroup>
+
+
+</Project>

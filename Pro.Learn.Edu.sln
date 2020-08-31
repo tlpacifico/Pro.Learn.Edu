@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{A1A9810D-E81
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{DF5213F1-ECCE-414F-BFB0-FC120DAB3454}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "middleware", "middleware", "{9F8D5E6C-1026-4B17-889E-DD0137BA0BCB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "business", "business", "{9F8D5E6C-1026-4B17-889E-DD0137BA0BCB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro.Learn.Edu.Database.Contracts", "src\database\Pro.Learn.Edu.Database.Contracts\Pro.Learn.Edu.Database.Contracts.csproj", "{078903C7-B7FD-4CFF-965D-AF10C4483394}"
 EndProject
@@ -27,7 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro.Learn.Edu.Database", "src\database\Pro.Learn.Edu.Database\Pro.Learn.Edu.Database.csproj", "{DC2B2A93-6DBB-4E02-964C-E8EDBF19C953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro.Learn.Edu.Database.Migrator", "src\database\Pro.Learn.Edu.Database.Migrator\Pro.Learn.Edu.Database.Migrator.csproj", "{D73D73C3-DE3E-488F-9237-2B15E3C00906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro.Learn.Edu.Database.Migrator", "src\database\Pro.Learn.Edu.Database.Migrator\Pro.Learn.Edu.Database.Migrator.csproj", "{D73D73C3-DE3E-488F-9237-2B15E3C00906}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pro.Learn.Edu.Api", "src\api\Pro.Learn.Edu.Api\Pro.Learn.Edu.Api.csproj", "{2C122D0D-4DE9-4499-9D18-96C71D279ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro.Learn.Edu.Business.Contract", "src\business\Pro.Learn.Edu.Business.Contract\Pro.Learn.Edu.Business.Contract.csproj", "{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro.Learn.Edu.Business", "src\business\Pro.Learn.Edu.Business\Pro.Learn.Edu.Business.csproj", "{6AA657B9-ABB1-46BC-A425-1AB4816905CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +53,18 @@ Global
 		{D73D73C3-DE3E-488F-9237-2B15E3C00906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D73D73C3-DE3E-488F-9237-2B15E3C00906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D73D73C3-DE3E-488F-9237-2B15E3C00906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C122D0D-4DE9-4499-9D18-96C71D279ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C122D0D-4DE9-4499-9D18-96C71D279ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C122D0D-4DE9-4499-9D18-96C71D279ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C122D0D-4DE9-4499-9D18-96C71D279ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA657B9-ABB1-46BC-A425-1AB4816905CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA657B9-ABB1-46BC-A425-1AB4816905CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA657B9-ABB1-46BC-A425-1AB4816905CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA657B9-ABB1-46BC-A425-1AB4816905CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +76,9 @@ Global
 		{078903C7-B7FD-4CFF-965D-AF10C4483394} = {DF5213F1-ECCE-414F-BFB0-FC120DAB3454}
 		{DC2B2A93-6DBB-4E02-964C-E8EDBF19C953} = {DF5213F1-ECCE-414F-BFB0-FC120DAB3454}
 		{D73D73C3-DE3E-488F-9237-2B15E3C00906} = {DF5213F1-ECCE-414F-BFB0-FC120DAB3454}
+		{2C122D0D-4DE9-4499-9D18-96C71D279ADC} = {A1A9810D-E813-4620-A32A-405BA2887233}
+		{78DA5CA4-5742-412F-AF4B-ACB1E9075B0B} = {9F8D5E6C-1026-4B17-889E-DD0137BA0BCB}
+		{6AA657B9-ABB1-46BC-A425-1AB4816905CD} = {9F8D5E6C-1026-4B17-889E-DD0137BA0BCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {170A3DF7-00E5-40FA-9ED1-599EACC5CE06}
