@@ -11,6 +11,13 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MySqlConnector" Version="0.69.10" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <ProjectReference Include="..\..\business\Pro.Learn.Edu.Business\Pro.Learn.Edu.Business.csproj" />
     <ProjectReference Include="..\..\database\Pro.Learn.Edu.Database\Pro.Learn.Edu.Database.csproj" />
   </ItemGroup>

@@ -12,7 +12,5 @@ namespace Pro.Learn.Edu.Database.Entity
         public int Quantity { get; set; }     
         public DateTimeOffset CreatedOn { get; set; }
         public string CreatedBy { get; set; }
-        public virtual ICollection<QuestionEntity> Questions { get; set; }
-
     }
 }

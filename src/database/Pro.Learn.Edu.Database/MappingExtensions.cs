@@ -28,10 +28,10 @@ namespace Pro.Learn.Edu.Database
               return builder;
         }
 
-        public static EntityTypeBuilder<T> CreateTableWithIdAndExternalId<T>(this EntityTypeBuilder<T> opt, string tableName, string schema)
+        public static EntityTypeBuilder<T> CreateTableWithIdAndExternalId<T>(this EntityTypeBuilder<T> opt, string tableName)
             where T : class, IHaveExternalId, IHaveId<long>
         {
-            opt.ToTable(tableName, schema);
+            opt.ToTable(tableName);
             opt.MapPrimaryKey();
             opt.MapExternalKey();
             return opt;

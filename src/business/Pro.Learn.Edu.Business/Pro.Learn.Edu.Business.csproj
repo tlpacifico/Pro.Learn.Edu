@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\..\tools\common.props" />
 
@@ -9,15 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="FluentValidation" Version="9.2.2" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\database\Pro.Learn.Edu.Database\Pro.Learn.Edu.Database.csproj" />
-    <ProjectReference Include="..\Pro.Learn.Edu.Business.Contract\Pro.Learn.Edu.Business.Contract.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Exam\" />
   </ItemGroup>
 </Project>

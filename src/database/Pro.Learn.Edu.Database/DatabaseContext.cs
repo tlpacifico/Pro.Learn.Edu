@@ -6,8 +6,6 @@ namespace Pro.Learn.Edu.Database
 {
     public class DatabaseContext : DbContext
     {
-        private const string ExamSchema = "Exam";
-
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
 
@@ -22,14 +20,14 @@ namespace Pro.Learn.Edu.Database
 
             builder.Entity<AnswerEntity>(opt =>
             {
-                opt.CreateTableWithIdAndExternalId("Answer", ExamSchema);
+                opt.CreateTableWithIdAndExternalId("Answer");
                 opt.Property(e => e.Description)
                    .IsRequired();
             });
 
             builder.Entity<ExamEntity>(opt =>
             {
-                opt.CreateTableWithIdAndExternalId("Exam", ExamSchema);
+                opt.CreateTableWithIdAndExternalId("Exam");
                 opt.Property(e => e.Name)
                    .IsRequired()
                    .HasMaxLength(64);
@@ -50,7 +48,7 @@ namespace Pro.Learn.Edu.Database
 
             builder.Entity<QuestionEntity>(opt =>
             {
-                opt.CreateTableWithIdAndExternalId("Question", ExamSchema);
+                opt.CreateTableWithIdAndExternalId("Question");
 
                 opt.Property(e => e.Description)
                     .IsRequired();
@@ -61,26 +59,49 @@ namespace Pro.Learn.Edu.Database
                 opt.Property(e => e.CreatedBy)
                     .IsRequired()
                     .HasMaxLength(64);
-                opt.HasOne(q => q.CorrectAnsweer)
-                    .WithMany()
-                    .HasForeignKey(q => q.CorrectAnswerId);
 
+                opt.HasOne<AnswerEntity>().WithOne()
+                .HasForeignKey<QuestionEntity>(e => e.CorrectAnswerId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired();
+
+            });
+
+            builder.Entity<ExamQuestionEntity>(opt =>
+            {
+                opt.ToTable("ExamQuestion");
+                opt.MapPrimaryKey();
+
+                opt.HasOne<ExamEntity>()
+                .WithMany()
+                .HasForeignKey(p => p.ExamId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired();
+
+                opt.HasOne<QuestionEntity>()
+                .WithMany()
+                .HasForeignKey(p => p.QuestionId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired();
             });
 
 
             builder.Entity<QuestionAnwserEntity>(opt =>
             {
-                opt.ToTable("QuestionAnwser", ExamSchema);
+                opt.ToTable("QuestionAnwser");
+                opt.MapPrimaryKey();
 
-                opt.HasKey(qa => new { qa.QuestionId, qa.AnswerId });
+                opt.HasOne<QuestionEntity>()
+                .WithMany()
+                .HasForeignKey(p => p.QuestionId)
+                 .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired();
 
-                opt.HasOne(bc => bc.Question)
-                    .WithMany(b => b.Answers)
-                    .HasForeignKey(bc => bc.QuestionId);
-
-                opt.HasOne(bc => bc.Answer)
-                    .WithMany(c => c.Questions)
-                    .HasForeignKey(bc => bc.QuestionId);
+                opt.HasOne<AnswerEntity>()
+                 .WithMany()
+                 .HasForeignKey(p => p.AnswerId)
+                  .OnDelete(DeleteBehavior.NoAction)
+                 .IsRequired();
 
             });
         }

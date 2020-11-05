@@ -60,7 +60,9 @@ namespace Pro.Learn.Edu.Database.Migrator
                     {
                         services.AddProLearnEduDatabase(o =>
                         {
-                            o.UseNpgsql(ctx.Configuration.GetConnectionString("ProLearnEduContext"));
+                            o.UseMySql(
+                               ctx.Configuration.GetConnectionString("ProLearnEduContext"),
+                               sqlOptions => sqlOptions.MigrationsAssembly(typeof(Program).Assembly.FullName));
                         });
                         services.AddHostedService<ProgramHost>();
                     })

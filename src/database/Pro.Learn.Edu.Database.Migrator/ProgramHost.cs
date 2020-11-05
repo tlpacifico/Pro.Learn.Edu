@@ -54,7 +54,7 @@ namespace Pro.Learn.Edu.Database
                 //await _context.Database.ExecuteSqlRawAsync(
                 //    $"ALTER DATABASE {_context.Database.GetDbConnection().Database} SET MULTI_USER", ct);
 
-                _logger.LogWarning("Global database lock was removed");
+                _logger.LogInformation("Global database lock was removed");
             }
         }
 
